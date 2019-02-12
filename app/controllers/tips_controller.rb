@@ -7,7 +7,7 @@ class TipsController < ApplicationController
       req.params['venueId'] = params[:venue_id]
       req.params['text'] = params[:tip]
     end
- 
+
     redirect_to tips_path
   end
 
@@ -18,5 +18,5 @@ class TipsController < ApplicationController
     end
     @results = JSON.parse(resp.body)["response"]["list"]["listItems"]["items"]
   end
-  
+
 end
